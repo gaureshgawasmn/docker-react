@@ -9,4 +9,5 @@ RUN npm run build
 
 #creating run phase using data from last stage 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
